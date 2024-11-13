@@ -3,7 +3,7 @@
 
 ## Description
 An application that tracks employees, departments and roles. Add employees/departments and view them in your terminal! Simply download the files open your terminal head to the main directory open and run node index.js, interact with the questions on the command line to view add/delete employees and departments! 
-[Walkthroughvideo](https://drive.google.com/file/d/192uKSWXglVj93KCQ1XaWOjhX8Z4XwkNR/view)
+[Walkthrough video](https://drive.google.com/file/d/192uKSWXglVj93KCQ1XaWOjhX8Z4XwkNR/view)
 
 ## Table of Contents
 - [Installation](#installation)
