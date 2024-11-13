@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const { addDepartment, viewDepartments, deleteDepartment } = require('./lib/department');
-const { addEmployee, viewAllEmployees, updateEmployeeRole,} = require('./lib/employee');
+const { addEmployee, viewAllEmployees, updateEmployeeRole, promptUserForEmployeeDetails, promptUserForRoleUpdate} = require('./lib/employee');
+const Employee = require('./lib/employee');
 
 //main menu
 const mainMenu =  async () =>{
@@ -46,13 +47,13 @@ const mainMenu =  async () =>{
                 await deleteDepartment(departmentId, mainMenu);
                 break;
             case 'View all employees':
-                await viewAllEmployees();
+                await viewAllEmployees(mainMenu);
                 break;
             case 'Add an employee':
-                await addEmployee();
+                await Employee.addEmployee(mainMenu);
                 break;
             case 'Update an employee role':
-                await updateEmployeeRole();
+                await Employee.updateEmployeeRole(mainMenu);
                 break;
             case 'Exit':
                 console.log('Goodbye!');
@@ -67,5 +68,7 @@ const mainMenu =  async () =>{
 
 // Call main menu
 console.log(mainMenu);
+console.log(Employee);
+console.log(typeof Employee.addEmployee);
 module.exports = { mainMenu };
 mainMenu();
